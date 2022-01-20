@@ -1,0 +1,389 @@
+{
+	"compiler": {
+		"version": "0.8.11+commit.d7f03943"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "compileAttributes",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "drawSVG",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "policeAndThief",
+				"outputs": [
+					{
+						"internalType": "contract IPoliceAndThief",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "seed",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "traitType",
+						"type": "uint8"
+					}
+				],
+				"name": "selectTrait",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_policeAndThief",
+						"type": "address"
+					}
+				],
+				"name": "setGame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "traitCountForType",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "traitData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "png",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_police",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_thief",
+						"type": "string"
+					}
+				],
+				"name": "uploadBodies",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "traitType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "traitIds",
+						"type": "uint8[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "png",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Traits.Trait[]",
+						"name": "traits",
+						"type": "tuple[]"
+					}
+				],
+				"name": "uploadTraits",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"compileAttributes(uint256)": {
+					"params": {
+						"tokenId": "the ID of the token to compose the metadata for"
+					},
+					"returns": {
+						"_0": "a JSON array of all of the attributes for given token ID"
+					}
+				},
+				"drawSVG(uint256)": {
+					"params": {
+						"tokenId": "the ID of the token to generate an SVG for"
+					},
+					"returns": {
+						"_0": "a valid SVG of the Thief / Police"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"tokenURI(uint256)": {
+					"params": {
+						"tokenId": "the ID of the token to generate the metadata for"
+					},
+					"returns": {
+						"_0": "a base64 encoded JSON dictionary of the token's metadata and SVG"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"uploadTraits(uint8,uint8[],(string,string)[])": {
+					"params": {
+						"traitType": "the trait type to upload the traits for (see traitTypes for a mapping)",
+						"traits": "the names and base64 encoded PNGs for each trait"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"compileAttributes(uint256)": {
+					"notice": "generates an array composed of all the individual traits and values"
+				},
+				"drawSVG(uint256)": {
+					"notice": "generates an entire SVG by composing multiple <image> elements of PNGs"
+				},
+				"tokenURI(uint256)": {
+					"notice": "generates a base64 encoded metadata response without referencing off-chain content"
+				},
+				"uploadTraits(uint8,uint8[],(string,string)[])": {
+					"notice": "administrative to upload the names and images associated with each trait"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/traits/Traits.sol": "Traits"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/traits/Context.sol": {
+			"keccak256": "0x851c3d8e30ea37c35947f620812e2e18718ac9312ef8d84b643fc46d94269540",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7c02fec97a236e7eda6646bb8aef30a00f134710ffc29f1965c27dc257cc58a3",
+				"dweb:/ipfs/QmNoqNHYS9HP9u8J3bG5kVztMNcQ42kYiiiKDN8tY94gvY"
+			]
+		},
+		"contracts/traits/IPoliceAndThief.sol": {
+			"keccak256": "0xde0375bac488d8c6baee1722f8f06cb1ee134400ed3a5333948c32ef02dc9eb2",
+			"license": "MIT LICENSE",
+			"urls": [
+				"bzz-raw://c74f2d2c1562291509ff2654089ba8973eb25542cf5dca700bfa910fb5bc113a",
+				"dweb:/ipfs/QmT1grsmK9b2NteWQzEsXAeGMHEn5qyZLkyvcGtkomQXzY"
+			]
+		},
+		"contracts/traits/ITraits.sol": {
+			"keccak256": "0x33f398d6640efaffa2ebbfc793dcd239d60cd8773c8308078e497beb13e2cc74",
+			"license": "MIT LICENSE",
+			"urls": [
+				"bzz-raw://d9c368060be3107ab1d070a53057a5d8e9a1a0531523fd2cd9aed0391259d0a9",
+				"dweb:/ipfs/QmPttds5ZwJ139ZDKyVnTLFN1o6Sk4CknnJ1VDJgdXgf1G"
+			]
+		},
+		"contracts/traits/Ownable.sol": {
+			"keccak256": "0x4983a381cffc3dd788d1599cf5612cfa42e2370e92d2236f77f445e4bef16c30",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://47e91de22ee42d06ccf1c9163462a179b4d130bc7777baac36f920a26fc94e3c",
+				"dweb:/ipfs/QmXS5P66GK8vRS2Cof4c3sffybXJUaDT3jTG1ZmhDrXJPy"
+			]
+		},
+		"contracts/traits/Strings.sol": {
+			"keccak256": "0x4a7637cd15b42d5ef983798a926991fcb4f218ac2f358681327cc369c883cff3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://408aee08ba6cd1deaf75c831df767ee784f97d605aabc8a12435729f4247bd21",
+				"dweb:/ipfs/QmWKb6bF5e3vSZD83x3nu9guPU8bmBYhTbypLSeJHgcS7V"
+			]
+		},
+		"contracts/traits/Traits.sol": {
+			"keccak256": "0x16e17cf53c75bb558e72c6325aaebb65c08e814d4b0777ac38452ce5d2f62e07",
+			"license": "MIT LICENSE",
+			"urls": [
+				"bzz-raw://2877385ea7d82a7cd8435246250fc8fc12b83a4e0657ae6ed3f96270522b3124",
+				"dweb:/ipfs/QmfXu5a5LUgofcRXbtdLd5sKSTrdBvjjdLwVAJwGs66QJ9"
+			]
+		}
+	},
+	"version": 1
+}
